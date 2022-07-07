@@ -43,9 +43,6 @@ const gridTheme = {
       sm: 540,
       xs: 540,
     },
-    col: {
-      padding: 0, // default 15
-    },
   },
 };
 

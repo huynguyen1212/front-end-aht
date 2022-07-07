@@ -492,7 +492,7 @@ export const SAboutUs = styled.div`
 
         .slick-active {
           button:before {
-            color: red;
+            color: #dd2f31;
           }
         }
       }
