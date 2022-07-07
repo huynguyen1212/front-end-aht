@@ -20,6 +20,7 @@ import {
 } from './style';
 import logo from 'assets/images/logo.png';
 import banner from 'assets/images/banner.png';
+import avatar from 'assets/images/avatar.png';
 import imgdumbble from 'assets/images/img_dumbble.png';
 import icondumbble from 'assets/images/icon_dumbble.png';
 import imgstrenght from 'assets/images/img_strenght.png';
@@ -119,12 +120,24 @@ function Home({}: Props) {
                   </button>
 
                   <div className="menu">
-                    <div className="menu_item">Home</div>
-                    <div className="menu_item menu_item_spec">Pages</div>
-                    <div className="menu_item menu_item_spec">Classes</div>
-                    <div className="menu_item menu_item_spec">Portfodivo</div>
-                    <div className="menu_item menu_item_spec">Blog</div>
-                    <div className="menu_item menu_item_spec">Contacts</div>
+                    <a href="#" className="menu_item">
+                      Home
+                    </a>
+                    <a href="#" className="menu_item">
+                      Pages
+                    </a>
+                    <a href="#" className="menu_item">
+                      Classes
+                    </a>
+                    <a href="#" className="menu_item">
+                      Portfodivo
+                    </a>
+                    <a href="#" className="menu_item">
+                      Blog
+                    </a>
+                    <a href="#" className="menu_item">
+                      Contacts
+                    </a>
                   </div>
                 </div>
 
@@ -281,25 +294,25 @@ function Home({}: Props) {
                               <div className="button_hover">
                                 <div className="button_item">
                                   <button>
-                                    <BsFillBasketFill />
+                                    <BsFillBasketFill size={'18px'} />
                                   </button>
                                 </div>
 
                                 <div className="button_item">
                                   <button>
-                                    <AiOutlineEye />
+                                    <AiOutlineEye size={'18px'} />
                                   </button>
                                 </div>
 
                                 <div className="button_item">
                                   <button>
-                                    <AiFillHeart />
+                                    <AiFillHeart size={'18px'} />
                                   </button>
                                 </div>
 
                                 <div className="button_item">
                                   <button>
-                                    <BsArrowLeftRight />
+                                    <BsArrowLeftRight size={'18px'} />
                                   </button>
                                 </div>
                               </div>
@@ -363,7 +376,7 @@ function Home({}: Props) {
                   <p className="title">See What They Said About Us</p>
 
                   <div className="avatar">
-                    <img src={imgpower} alt="" />
+                    <img src={avatar} alt="" />
                   </div>
 
                   <p className="content">
@@ -380,7 +393,7 @@ function Home({}: Props) {
                   <p className="title">See What They Said About Us</p>
 
                   <div className="avatar">
-                    <img src={imgpower} alt="" />
+                    <img src={avatar} alt="" />
                   </div>
 
                   <p className="content">
@@ -397,7 +410,7 @@ function Home({}: Props) {
                   <p className="title">See What They Said About Us</p>
 
                   <div className="avatar">
-                    <img src={imgpower} alt="" />
+                    <img src={avatar} alt="" />
                   </div>
 
                   <p className="content">
@@ -464,16 +477,16 @@ function Home({}: Props) {
 
               <div className="icon">
                 <div className="icon_item">
-                  <FaFacebookF size={'18px'} />
+                  <FaFacebookF size={'18px'} color="#777777" />
                 </div>
                 <div className="icon_item">
-                  <AiOutlineTwitter size={'18px'} />
+                  <AiOutlineTwitter size={'18px'} color="#777777" />
                 </div>
                 <div className="icon_item">
-                  <AiOutlineGooglePlus size={'18px'} />
+                  <AiOutlineGooglePlus size={'18px'} color="#777777" />
                 </div>
                 <div className="icon_item">
-                  <BsYoutube size={'18px'} />
+                  <BsYoutube size={'18px'} color="#777777" />
                 </div>
               </div>
             </div>

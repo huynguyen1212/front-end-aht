@@ -28,7 +28,7 @@ const gridTheme = {
     xs: 575,
   },
   row: {
-    padding: 10,
+    padding: 15,
   },
   col: {
     padding: 15, // default 15

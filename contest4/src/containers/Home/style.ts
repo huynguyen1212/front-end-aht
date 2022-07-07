@@ -52,6 +52,7 @@ export const SHeader = styled.div`
             font-weight: 400;
             font-family: 'Poppins';
             margin: 0 25px;
+            text-decoration: unset;
           }
 
           /* .menu_item_spec {
@@ -64,6 +65,7 @@ export const SHeader = styled.div`
     .icon {
       display: flex;
       margin: 11px -26px 0;
+      line-height: 0;
       .icon_item {
         padding: 0 26px;
         cursor: pointer;
@@ -100,6 +102,9 @@ export const SHeader = styled.div`
       grid-template-columns: 8fr 1fr 1fr;
 
       .links {
+        margin-right: 25px;
+        margin-top: 8px;
+
         .for_responsive {
           min-height: 100%;
           overflow-y: auto;
@@ -137,6 +142,11 @@ export const SHeader = styled.div`
   @media screen and (max-width: 575px) {
     .header {
       grid-template-columns: 3fr 1fr 1fr;
+
+      .links {
+        margin-right: 10px;
+        margin-top: 8px;
+      }
 
       .logo {
         width: 150px;
@@ -395,7 +405,7 @@ export const SProduct = styled.div`
                 color: #515357;
 
                 &:hover {
-                  background-color: red;
+                  background-color: #dd2f31;
                   color: white;
                 }
               }
@@ -454,6 +464,7 @@ export const SAboutUs = styled.div`
           width: 80px;
           height: 80px;
           border-radius: 40px;
+          object-fit: cover;
         }
       }
 
@@ -495,7 +506,7 @@ export const SAboutUs = styled.div`
         li {
           margin: 0;
           button:before {
-            font-size: 13px;
+            font-size: 10px;
           }
         }
 
@@ -543,10 +554,10 @@ export const SAboutUs = styled.div`
       }
 
       .slick-slider {
-      .slick-dots {
-        bottom: 15px;
+        .slick-dots {
+          bottom: 15px;
+        }
       }
-    }
     }
   }
 `;
@@ -588,8 +599,7 @@ export const SFooter = styled.div`
   }
 
   .footer_bottom {
-    margin: 0 0 39px -6px;
-
+    margin: 53px 0 37px 0;
     .title {
       font-size: 18px;
       line-height: 30px;
@@ -612,6 +622,10 @@ export const SFooter = styled.div`
 
       &:hover {
         color: white;
+      }
+
+      svg {
+        margin-right: 18px;
       }
     }
   }
