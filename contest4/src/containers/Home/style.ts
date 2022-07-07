@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import banner from 'assets/images/banner.png';
 
-export const SHome = styled.div``;
+export const SHome = styled.div`
+  @media screen and (max-width: 575px) {
+    /* .sc-pGacB {
+      padding: 0 !important;
+    } */
+  }
+`;
 
 export const SHeader = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
@@ -516,9 +522,10 @@ export const SAboutUs = styled.div`
       }
     }
   }
+
   @media screen and (max-width: 575px) {
     .about_us {
-      margin-bottom: 30px;
+      margin-bottom: 50px;
       padding: 0;
 
       .about_us_item {
@@ -529,7 +536,17 @@ export const SAboutUs = styled.div`
         .content {
           font-size: 14px;
         }
+
+        .des {
+          margin-bottom: 51px;
+        }
       }
+
+      .slick-slider {
+      .slick-dots {
+        bottom: 15px;
+      }
+    }
     }
   }
 `;
