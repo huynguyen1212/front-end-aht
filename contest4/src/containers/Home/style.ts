@@ -93,29 +93,31 @@ export const SHeader = styled.div`
       display: grid;
       grid-template-columns: 8fr 1fr 1fr;
 
-      .for_responsive {
-        min-height: 100%;
-        overflow-y: auto;
-        align-items: flex-start;
-        position: fixed;
-        z-index: 10;
-        height: 100vh;
-        top: 0;
-        left: -300px;
-        width: 250px;
-        background: #102136;
-        padding: 40px 10px;
-        transition: 0.3s all;
+      .links {
+        .for_responsive {
+          min-height: 100%;
+          overflow-y: auto;
+          align-items: flex-start;
+          position: fixed;
+          z-index: 10;
+          height: 100vh;
+          top: 0;
+          left: -300px;
+          width: 250px;
+          background: #102136;
+          padding: 40px 10px;
+          transition: 0.3s all;
 
-        .menu {
-          display: block;
-        }
+          .menu {
+            display: block;
+          }
 
-        #close-menu {
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          color: white;
+          #close-menu {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: white;
+          }
         }
       }
 
@@ -129,6 +131,7 @@ export const SHeader = styled.div`
   @media screen and (max-width: 575px) {
     .header {
       grid-template-columns: 3fr 1fr 1fr;
+
       .logo {
         width: 150px;
         height: 40px;
