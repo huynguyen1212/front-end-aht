@@ -14,8 +14,9 @@ import NotFoundPage from 'components/NotFoundPage';
 import { selectAppStore } from './store/selecters';
 import LanguageProvider from './LanguageProvider';
 import { BaseCSS, GridThemeProvider } from 'styled-bootstrap-grid';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import HomeWeatherApp from 'containers/HomeWeatherApp';
 
 const gridTheme = {
   gridColumns: 12,
@@ -56,7 +57,8 @@ function App() {
           <Router>
             <Switch>
               <Route exact path="/">
-                <Home />
+                {/* <Home /> */}
+                <HomeWeatherApp />
               </Route>
 
               <Route path="*">
