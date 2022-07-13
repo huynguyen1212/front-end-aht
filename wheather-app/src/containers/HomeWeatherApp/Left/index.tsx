@@ -10,10 +10,13 @@ import { SLeft } from './style';
 import clouds from 'assets/images/weatherapp/Clouds.png';
 import img_bottom from 'assets/images/weatherapp/img_bottom.webp';
 
-interface Props {}
+interface Props {
+  data: any;
+  setcity: any;
+}
 
 // eslint-disable-next-line
-function Left({}: Props) {
+function Left({ data, setcity }: Props) {
   return (
     <SLeft>
       <div className="search">

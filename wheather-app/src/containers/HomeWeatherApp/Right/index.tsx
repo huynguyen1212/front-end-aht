@@ -10,10 +10,12 @@ import { SRight } from './style';
 import Today from './Today';
 import Week from './Week';
 
-interface Props {}
+interface Props {
+  data: any;
+}
 
 // eslint-disable-next-line
-function Right({}: Props) {
+function Right({ data }: Props) {
   const [tab, settab] = useState(0);
 
   return (
@@ -40,7 +42,13 @@ function Right({}: Props) {
       </div>
 
       <div className="tab_content">
-        {tab === 0 ? <Today /> : tab === 1 ? <Week /> : <Hour />}
+        {tab === 0 ? (
+          <Today current={data?.current} />
+        ) : tab === 1 ? (
+          <Week daily={data?.daily} />
+        ) : (
+          <Hour hourly={data?.hourly} />
+        )}
       </div>
     </SRight>
   );

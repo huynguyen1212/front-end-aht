@@ -36,6 +36,7 @@ export const SToday = styled.div`
     border-radius: 4px;
     text-align: center;
     margin-bottom: 20px;
+    min-height: 190px;
 
     p {
       margin: 0;
@@ -44,21 +45,92 @@ export const SToday = styled.div`
     .today_item_name {
       text-align: left;
       color: rgb(0 0 0/26%);
-      font-size: 16px;
+      font-size: 20px;
     }
 
-    img {
+    .today_item_img {
       margin: 10px 0;
-      color: #ffc107;
+    }
+
+    .today_item_img_spec {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: 20px;
+
+      span {
+        margin-left: 10px;
+      }
     }
 
     .today_item_content {
       color: #6c757d;
-      font-size: 18px;
+      font-size: 21px;
+      font-weight: 600;
     }
   }
 `;
 
-export const SWeek = styled.div``;
+export const SWeek = styled.div`
+  p {
+    margin: 0;
+  }
+
+  .daily_tab {
+    margin: 0 10px;
+    .daily_item {
+      text-align: center;
+      background-color: white;
+      border-radius: 4px;
+      padding: 10px;
+      margin: 0 -10px 20px -10px;
+
+      color: rgb(0 0 0/26%);
+
+      .time {
+        text-align: left;
+        font-size: 18px;
+      }
+
+      .img {
+        margin: 10px 0;
+      }
+
+      .temperature {
+        font-size: 19px;
+        font-weight: 600px;
+        color: #6c757d;
+      }
+    }
+
+    .active {
+      background-color: #0dcaf0;
+    }
+  }
+
+  .daily_content {
+    background-color: white;
+    padding: 10px;
+
+    .daily_content_time {
+      color: #6c757d;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .daily_content_content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .daily_content_side {
+        .daily_content_item {
+          margin-bottom: 15px;
+          color: #6c757d;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+`;
 
 export const SHour = styled.div``;
