@@ -5,7 +5,10 @@
  */
 
 import React, { memo, useState } from 'react';
+import Hour from './Hour';
 import { SRight } from './style';
+import Today from './Today';
+import Week from './Week';
 
 interface Props {}
 
@@ -37,7 +40,7 @@ function Right({}: Props) {
       </div>
 
       <div className="tab_content">
-        
+        {tab === 0 ? <Today /> : tab === 1 ? <Week /> : <Hour />}
       </div>
     </SRight>
   );

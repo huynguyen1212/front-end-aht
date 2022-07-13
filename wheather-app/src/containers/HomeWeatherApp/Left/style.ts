@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 
 export const SLeft = styled.div`
-  background-color: white;
-  margin-right: -15px;
-  padding: 25px;
-
   .search {
     margin-bottom: 30px;
 
@@ -24,7 +20,6 @@ export const SLeft = styled.div`
     margin-bottom: 10px;
 
     img {
-      margin-bottom: 30px;
     }
 
     p {

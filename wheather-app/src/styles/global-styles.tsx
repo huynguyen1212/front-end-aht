@@ -7,5 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Poppins";
     background-color: #d6d7da;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
 `;

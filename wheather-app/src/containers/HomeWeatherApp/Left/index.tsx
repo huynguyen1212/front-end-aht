@@ -7,7 +7,7 @@
 import React, { memo } from 'react';
 
 import { SLeft } from './style';
-import iconbrand from 'assets/images/icon_brand.png';
+import clouds from 'assets/images/weatherapp/Clouds.png';
 import img_bottom from 'assets/images/weatherapp/img_bottom.webp';
 
 interface Props {}
@@ -17,11 +17,11 @@ function Left({}: Props) {
   return (
     <SLeft>
       <div className="search">
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search City" />
       </div>
 
       <div className="result_search">
-        <img src={iconbrand} alt="" />
+        <img src={clouds} alt="" />
 
         <p className="title">Ha Noi</p>
 
