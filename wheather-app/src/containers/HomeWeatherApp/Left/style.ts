@@ -20,6 +20,7 @@ export const SLeft = styled.div`
     margin-bottom: 10px;
 
     img {
+      width: 50%;
     }
 
     p {
@@ -76,6 +77,49 @@ export const SLeft = styled.div`
       color: white;
       font-size: 30px;
       font-weight: 500;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    .search input {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .result_search {
+      .title {
+        font-size: 26px;
+      }
+
+      .temperature {
+        font-size: 28px;
+      }
+
+      .time {
+        font-size: 18px;
+      }
+
+      .des1 {
+        font-size: 15px;
+      }
+
+      .des2 {
+        font-size: 15px;
+      }
+    }
+
+    .img_bottom .title_bottom {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .result_search img {
+      width: unset;
+    }
+
+    .img_bottom {
+      display: none;
     }
   }
 `;

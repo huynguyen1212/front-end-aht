@@ -122,7 +122,7 @@ function Week({ daily }: Props) {
               Humidity : {content?.humidity} %
             </p>
             <p className="daily_content_item">
-              Wind speed : {Number(content ? content?.wind_speed : 0) * 3.6}{' '}
+              Wind speed : {(Number(content ? content?.wind_speed : 0) * 3.6).toFixed(3)}{' '}
               km/h
             </p>
           </div>

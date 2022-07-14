@@ -27,6 +27,12 @@ export const SRight = styled.div`
       border-bottom: 2px solid #212529;
     }
   }
+
+  @media screen and (max-width: 1199px) {
+    .tab_control .tab_control_item {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const SToday = styled.div`
@@ -69,6 +75,13 @@ export const SToday = styled.div`
       font-weight: 600;
     }
   }
+
+  @media screen and (max-width: 991px) {
+    .today_item {
+      padding: 10px;
+      min-height: 120px;
+    }
+  }
 `;
 
 export const SWeek = styled.div`
@@ -84,6 +97,7 @@ export const SWeek = styled.div`
       border-radius: 4px;
       padding: 10px;
       margin: 0 -10px 20px -10px;
+      min-height: 165px;
 
       color: rgb(0 0 0/26%);
 
@@ -129,6 +143,12 @@ export const SWeek = styled.div`
           font-size: 16px;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .daily_content .daily_content_content {
+      display: block;
     }
   }
 `;

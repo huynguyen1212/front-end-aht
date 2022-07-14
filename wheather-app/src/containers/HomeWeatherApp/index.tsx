@@ -20,17 +20,22 @@ interface Props {}
 function HomeWeatherApp({}: Props) {
   useInjectReducer('HomeWeatherApp', reducersHomeWeatherApp);
   const [data, setData] = useState();
-  const [city, setcity] = useState();
+  const [dataToday, setdataToday] = useState<any>()
 
   const [lat, setlat] = useState();
   const [lon, setlon] = useState();
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position: any) => {
-      setlat(position.coords.latitude);
-      setlon(position.coords.longitude);
-    });
-  }, []);
+    if(dataToday) {
+      setlat(dataToday?.coord?.lat);
+      setlon(dataToday?.coord?.lon);
+    } else {
+      navigator.geolocation.getCurrentPosition((position: any) => {  
+        setlat(position.coords.latitude);
+        setlon(position.coords.longitude);
+      });
+    }
+  }, [dataToday]);
 
   useEffect(() => {
     if (lat && lon) {
@@ -51,13 +56,13 @@ function HomeWeatherApp({}: Props) {
     <ErrorBound>
       <WrapHomeWeatherApp>
         <Row>
-          <Col xl={3} lg={3} md={3} sm={12} xs={12}>
+          <Col xl={3} lg={3} md={12} sm={12} xs={12}>
             <div className="left">
-              <Left data={data} setcity={setcity} />
+              <Left data={data} setdataToday={setdataToday} />
             </div>
           </Col>
 
-          <Col xl={9} lg={9} md={9} sm={12} xs={12}>
+          <Col xl={9} lg={9} md={12} sm={12} xs={12}>
             <div className="right">
               <Right data={data} />
             </div>

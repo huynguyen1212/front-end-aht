@@ -29,6 +29,35 @@ const WrapHomeWeatherApp = styled.div`
     height: 90vh;
     overflow: auto;
   }
+
+  @media screen and (max-width: 1199px) {
+    padding: 0px 30px;
+    
+    .left {
+      overflow: auto;
+      padding: 10px;
+    }
+
+    .right {
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0px 10px;
+    overflow: auto;
+
+    .left {
+      margin-right: 0;
+      overflow: hidden;
+      height: unset;
+      margin-bottom: 10px;
+    }
+
+    .right {
+      margin-left: 0;
+    }
+  }
 `;
 
 export default WrapHomeWeatherApp;

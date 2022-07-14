@@ -59,7 +59,7 @@ function Today({ current }: Props) {
               />
             </div>
             <p className="today_item_content">
-              {Number(current ? current?.wind_speed : 0) * 3.6} km/h
+              {(Number(current ? current?.wind_speed : 0) * 3.6).toFixed(3)} km/h
             </p>
           </div>
         </Col>
