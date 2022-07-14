@@ -133,4 +133,8 @@ export const SWeek = styled.div`
   }
 `;
 
-export const SHour = styled.div``;
+export const SHour = styled.div`
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+`;

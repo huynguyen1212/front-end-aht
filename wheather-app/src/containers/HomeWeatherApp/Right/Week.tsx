@@ -16,12 +16,12 @@ interface Props {
 
 // eslint-disable-next-line
 function Week({ daily }: Props) {
-  console.log('daily: ', daily);
+  // console.log('daily: ', daily);
   const [tab, settab] = useState<number>(0);
 
   const [content, setcontent] = useState<any>();
 
-  console.log('content: ', content);
+  // console.log('content: ', content);
 
   useEffect(() => {
     for (let i = 0; i < daily?.length; i++) {
