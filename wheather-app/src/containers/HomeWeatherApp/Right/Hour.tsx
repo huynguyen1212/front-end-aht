@@ -6,8 +6,8 @@
 
 import React, { memo, useEffect, useState } from 'react';
 import { SHour } from './style';
-import CanvasJSReact from '../../../components/canvasjs-3.6.6/canvasjs.react';
-import { format_date, format_date_24 } from 'helpers';
+import CanvasJSReact from 'components/canvasjs-3.6.6/canvasjs.react';
+import { format_date_24 } from 'helpers';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 interface Props {
   hourly: any;
@@ -19,8 +19,6 @@ function Hour({ hourly }: Props) {
 
   const [dataPoint1, setdataPoint1] = useState<any[]>([]);
   const [dataPoint2, setdataPoint2] = useState<any[]>([]);
-
-  console.log('dataPoint1: ', dataPoint1);
 
   useEffect(() => {
     let data1: any[] = [];

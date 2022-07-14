@@ -17,6 +17,8 @@ interface Props {
 
 // eslint-disable-next-line
 function Left({ data, setcity }: Props) {
+  console.log('data: ', data);
+
   return (
     <SLeft>
       <div className="search">

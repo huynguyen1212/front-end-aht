@@ -9,6 +9,8 @@ import { Col, Row } from 'styled-bootstrap-grid';
 import { SWeek } from './style';
 import { ReactComponent as Sun } from 'assets/images/weatherapp/sun.svg';
 import { format_date } from 'helpers';
+import moment from 'moment';
+import { time } from 'console';
 
 interface Props {
   daily: any;
@@ -16,20 +18,46 @@ interface Props {
 
 // eslint-disable-next-line
 function Week({ daily }: Props) {
-  // console.log('daily: ', daily);
   const [tab, settab] = useState<number>(0);
+
+  const [dailyFinal, setdailyFinal] = useState<any[]>([]);
 
   const [content, setcontent] = useState<any>();
 
-  // console.log('content: ', content);
+  const [day, setday] = useState<any[]>([]);
 
   useEffect(() => {
-    for (let i = 0; i < daily?.length; i++) {
+    const a = moment();
+    let day: any[] = [];
+
+    for (let i = 0; i < 8; i++) {
+      day.push(a.add(1, 'day').format('dddd, Do/MM'));
+    }
+    setday(day);
+  }, []);
+
+  useEffect(() => {
+    if (daily && day) {
+      let dailyF: any[] = [];
+
+      for (let i = 0; i < daily.length; i++) {
+        let ob: any = {};
+        ob = { ...daily[i] };
+        ob.time = day[i];
+
+        dailyF.push(ob);
+      }
+      setdailyFinal(dailyF);
+    }
+  }, [daily, day]);
+
+  useEffect(() => {
+    for (let i = 0; i < dailyFinal?.length; i++) {
       if (tab === i) {
-        setcontent(daily[i]);
+        setcontent(dailyFinal[i]);
       }
     }
-  }, [daily, tab]);
+  }, [dailyFinal, tab]);
 
   const [sunrise, setSunrise] = useState();
   const [sunset, setSunset] = useState();
@@ -48,7 +76,7 @@ function Week({ daily }: Props) {
     <SWeek>
       <div className="daily_tab">
         <Row>
-          {daily?.map((d: any, i: number) => {
+          {dailyFinal?.map((d: any, i: number) => {
             return (
               <Col
                 xl={3}
@@ -60,7 +88,7 @@ function Week({ daily }: Props) {
                 onClick={() => settab(i)}
               >
                 <div className={`daily_item ${tab === i ? 'active' : ''}`}>
-                  <p className="time">Wed, 13/7</p>
+                  <p className="time">{d?.time}</p>
 
                   <div className="img">
                     <Sun color="#ffc107" fontSize={'30px'} />
@@ -77,7 +105,7 @@ function Week({ daily }: Props) {
       </div>
 
       <div className="daily_content">
-        <p className="daily_content_time">Wed, 13/7</p>
+        <p className="daily_content_time">{content?.time}7</p>
 
         <div className="daily_content_content">
           <div className="daily_content_side">
