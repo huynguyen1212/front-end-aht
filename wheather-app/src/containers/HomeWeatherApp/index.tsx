@@ -20,17 +20,17 @@ interface Props {}
 function HomeWeatherApp({}: Props) {
   useInjectReducer('HomeWeatherApp', reducersHomeWeatherApp);
   const [data, setData] = useState();
-  const [dataToday, setdataToday] = useState<any>()
+  const [dataToday, setdataToday] = useState<any>();
 
   const [lat, setlat] = useState();
   const [lon, setlon] = useState();
 
   useEffect(() => {
-    if(dataToday) {
+    if (dataToday) {
       setlat(dataToday?.coord?.lat);
       setlon(dataToday?.coord?.lon);
     } else {
-      navigator.geolocation.getCurrentPosition((position: any) => {  
+      navigator.geolocation.getCurrentPosition((position: any) => {
         setlat(position.coords.latitude);
         setlon(position.coords.longitude);
       });
@@ -41,7 +41,13 @@ function HomeWeatherApp({}: Props) {
     if (lat && lon) {
       request({
         method: 'GET',
-        url: `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=b2a7cbc687d973cb62fbd93c7bafee6f`,
+        url: `https://api.openweathermap.org/data/2.5/onecall`,
+        params: {
+          lat,
+          lon,
+          units: 'metric',
+          appid: 'b2a7cbc687d973cb62fbd93c7bafee6f',
+        },
       })
         .then((res: any) => {
           setData(res?.data);
